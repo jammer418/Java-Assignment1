@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment1.PokemonGraphController">
+   <children>
+      <BorderPane layoutX="182.0" layoutY="100.0" prefHeight="400.0" prefWidth="563.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <BarChart fx:id="pokemonGraph" BorderPane.alignment="CENTER">
+              <xAxis>
+                <CategoryAxis fx:id="categoryAxis" label="Pokemon" side="BOTTOM">
+                     <tickLabelFont>
+                        <Font name="CentSchbkCyrill BT Bold" size="17.0" />
+                     </tickLabelFont></CategoryAxis>
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="numberAxis" label="Total" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </center>
+         <bottom>
+            <Button fx:id="changeBtn" mnemonicParsing="false" onAction="#loadTableView" text="Switch" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font></Button>
+         </bottom>
+         <top>
+            <Label prefHeight="34.0" prefWidth="295.0" text="Pokemon Total Stats" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="CentSchbkCyrill BT Bold" size="27.0" />
+               </font></Label>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
